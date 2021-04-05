@@ -10,7 +10,7 @@ const ToolbarComponent = props => (
             <div className="toolbar_toggle-button">
                 <SideDrawToggleComponent drawToggleClickHandler={props.drawToggleClickHandler}/>
             </div>
-            <div className="toolbar_logo"><a href="/">The Logo</a></div>
+            <div className="toolbar_logo"><a href="http://www.catiawidgets.net/">CatiaWidgets</a></div>
             <div className="spacer"></div>
             <div className="toolbar_navigation-items">
                 <ul>

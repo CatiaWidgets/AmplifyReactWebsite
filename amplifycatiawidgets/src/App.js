@@ -1,10 +1,13 @@
 //https://academind.com/tutorials/reactjs-navbar-side-drawer/
 
-import React, { Component, useState, useEffect } from "react";
+import React, { Component } from "react";
 
 import ToolbarComponent from "./Components/Toolbar/ToolbarComponent";
 import SideDrawComponent from "./Components/SideDraw/SideDrawComponent";
 import BackdropComponent from "./Components/Backdrop/BackdropComponent";
+
+
+import TestRest from "./Components/DataModel/DataModelViewComponent";
 
 class App extends Component {
 
@@ -39,7 +42,8 @@ class App extends Component {
               {backdrop}
               
               <main style={{marginTop:'64px'} }>
-                  <p>Thisis the page content!</p>
+                  <p>This is the page content!</p>
+                  <TestRest />
               </main>
         </div>
       );
