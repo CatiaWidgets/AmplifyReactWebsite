@@ -2,10 +2,14 @@ import React, { } from "react";
 
 import './Toolbar.css';
 
+import SideDrawToggleComponent from "../SideDraw/SideDrawToggleComponent";
+
 const ToolbarComponent = props => (
     <header className="toolbar">
         <nav className="toolbar_navigation">
-            <div></div>
+            <div className="toolbar_toggle-button">
+                <SideDrawToggleComponent drawToggleClickHandler={props.drawToggleClickHandler}/>
+            </div>
             <div className="toolbar_logo"><a href="/">The Logo</a></div>
             <div className="spacer"></div>
             <div className="toolbar_navigation-items">
