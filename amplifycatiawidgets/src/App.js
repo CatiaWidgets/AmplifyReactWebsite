@@ -42,7 +42,7 @@ class App extends Component {
               {backdrop}
               
               <main style={{marginTop:'64px'} }>
-                  <p>This is the page content!</p>
+                  <p>This is the page content! added proxy to package.json</p>
                   <TestRest />
               </main>
         </div>
