@@ -1,5 +1,6 @@
-import React, { useMemo, useState, useEffect } from "react";
-
+import React, { Component  } from "react";
+import axios from 'axios'
+import ReactTable from "react-table"; 
 
 export default class DataModelViewComponent extends Component {
     constructor(props) {
