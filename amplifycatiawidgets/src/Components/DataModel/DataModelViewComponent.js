@@ -1,67 +1,9 @@
-import React, { Component } from 'react';
-import { useTable } from 'react-table'
-import styled from 'styled-components'
+import React, { Component} from 'react';
 import axios from 'axios'
+import Table from "./Table";
 
-const Styles = styled.div`
-  table {
-    width: 100%;
-    border-spacing: 0;
-    border: 1px solid black;
-    tr {
-      :last-child {
-        td {
-          border-bottom: 0;
-        }
-      }
-    }
-    th,
-    td {
-      margin: 0;
-      padding: 1rem;
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
-      :last-child {
-        border-right: 0;
-      }
-    }
-  }
-`
-
-function Table({ columns, data }) {
-    const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({ columns, data })
-
-    // Render Data Table UI
-    return (
-        <table {...getTableProps()}>
-            <thead>
-                {headerGroups.map(headerGroup => (
-                    <tr {...headerGroup.getHeaderGroupProps()}>
-                        {headerGroup
-                            .headers
-                            .map(column => (
-                                <th {...column.getHeaderProps()}>{column.render('Header')}</th>
-                            ))}
-                    </tr>
-                ))}
-            </thead>
-            <tbody {...getTableBodyProps()}>
-                {rows.map((row, i) => {
-                    prepareRow(row);
-                    return (
-                        <tr {...row.getRowProps()}>
-                            {row
-                                .cells
-                                .map(cell => {
-                                    return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
-                                })}
-                        </tr>
-                    )
-                })}
-            </tbody>
-        </table>
-    )
-}
+import './Table.css';
+import './Table2.css';
 
 class DataModelViewComponent extends Component {
 
@@ -79,7 +21,7 @@ class DataModelViewComponent extends Component {
             method: 'get',
             url: 'https://ip2dfwmit2.execute-api.eu-west-1.amazonaws.com/Prod/v1/DataModel',
             headers: {
-                'x-api-key': 'hygscUxN0S5qg5WzLKjb2FLmSE9NMCF5KOXxO3zf', 'Access-Control-Allow-Origin': '*'
+                'x-api-key': 'hygscUxN0S5qg5WzLKjb2FLmSE9NMCF5KOXxO3zf'
             }
         };
 
@@ -91,29 +33,29 @@ class DataModelViewComponent extends Component {
     componentDidMount() {
         this.getUsersData()
     }
+
     render() {
+
         const columns = [
             {
-                Header: 'firstName',
+                Header: 'First Name',
                 accessor: 'firstName',
             },
             {
-                Header: 'lastName',
+                Header: 'Last Name',
                 accessor: 'lastName',
             },
             {
-                Header: 'age',
+                Header: 'Age',
                 accessor: 'age',
+                className: 'HeaderAge',
             }
         ]
 
         return (
-            <Styles>
-                <Table
-                    data={this.state.users}
-                    columns={columns}
-                />
-            </Styles>
+            <div className="App">
+                <Table columns={columns} data={this.state.users} />
+            </div>
         )
     }
 }
