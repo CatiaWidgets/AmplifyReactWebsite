@@ -23,7 +23,7 @@ class DataModelViewComponent extends Component {
             headers: {
                 'x-api-key': 'hygscUxN0S5qg5WzLKjb2FLmSE9NMCF5KOXxO3zf',
                 //'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Credentials': 'true',
+                //'Access-Control-Allow-Credentials': 'true',
                 //'Access-Control-Allow-Methods': 'GET,OPTIONS,PATCH,POST,DELETE',
                 'Access-Control-Allow-Headers':'Content-Type, X-Amz-Date, Authorization, X-Api-Key, X-Amz-Security-Token'
             }

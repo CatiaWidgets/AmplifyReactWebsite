@@ -42,7 +42,7 @@ class App extends Component {
               {backdrop}
               
               <main style={{marginTop:'64px'} }>
-                  <p>This is the page content! added access control origin, credentials,headers and Methods 2</p>
+                  <p>This is the page content! added access control origin, credentials,headers and Methods 3</p>
                   <TestRest />
               </main>
         </div>
