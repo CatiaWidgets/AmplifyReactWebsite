@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 import axios from 'axios'
 import Table from "./Table";
 
+import './DataModelViewComponent.css';
 
 class DataModelViewComponent extends Component {
 
@@ -66,7 +67,7 @@ class DataModelViewComponent extends Component {
         ]
 
         return (
-            <div className="App">
+            <div className="DataTable">
                 <Table columns={columns} data={this.state.users} />
             </div>
         )
