@@ -2,8 +2,6 @@ import React, { Component} from 'react';
 import axios from 'axios'
 import Table from "./Table";
 
-import './Table.css';
-import './Table2.css';
 
 class DataModelViewComponent extends Component {
 
