@@ -50,6 +50,9 @@ class DataModelViewComponent extends Component {
             {
                 Header: 'First Name',
                 accessor: 'firstName',
+                headerStyle: {
+                    backgroundColor: "green"
+                }
             },
             {
                 Header: 'Last Name',
