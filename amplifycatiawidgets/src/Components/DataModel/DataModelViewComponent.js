@@ -11,7 +11,19 @@ class DataModelViewComponent extends Component {
         super(props)
         this.state = {
             users: [],
-            loading: true
+            loading: true,
+            selectionChanged: false,
+            rowHighSelect: [],
+            rowEdit: null,
+            open: false,
+            addvalue: "",
+            value: "",
+            editableRows: {},
+            selectedRowIndex: [],
+            showEdit: false,
+            showAdd: false,
+            showDelete: false,
+            selected: null
         }
     }
 
